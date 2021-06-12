@@ -120,12 +120,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
             googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
                 public void onMapClick(LatLng point) {
-                    pointCount++;
                     if (pointCount <= 7) {
-//                        Toast.makeText(getApplicationContext(),
-//                                point.latitude + ", " + point.longitude,
-//                                Toast.LENGTH_SHORT).show();
-
+                        pointCount++;
                         MarkerOptions options = new MarkerOptions()
                                 .position(new LatLng(point.latitude, point.longitude));
                         mMarker = mMap.addMarker(options);
